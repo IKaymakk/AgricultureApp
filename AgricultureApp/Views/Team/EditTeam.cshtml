@@ -1,0 +1,47 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "EditTeam";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div style="width:100%" class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@ViewBag.ID Numaralı Personel</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputUsername1">Personel Adı</label>
+                    <br />
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                    <input asp-for="PersonName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Personel Görevi</label>
+                    <br />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Personel Resmi</label>
+                    <br />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input asp-for="ImageUrl" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Instagram</label>
+                    <br />
+                    <span asp-validation-for="InstagramURL" class="text-danger"></span>
+                    <input asp-for="InstagramURL" class="form-control" />
+                </div> 
+                <div class="form-group">
+                    <label for="exampleInputPassword1">LinkedIn</label>
+                    <br />
+                    <span asp-validation-for="LinkedInURL" class="text-danger"></span>
+                    <input asp-for="LinkedInURL" class="form-control" />
+                </div>
+                <button class="btn btn-outline-success">Kaydet</button>
+                <a href="/Service/Index" class="btn btn-light">Vazgeç</a>
+                <input asp-for="TeamID" readonly="readonly" type="hidden" />
+            </form>
+        </div>
+    </div>
+</div>

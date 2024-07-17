@@ -1,0 +1,42 @@
+﻿@model EntityLayer.Concrete.Team
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+<div style="width:100%" class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4>Yeni Personel Girişi</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputUsername1">Personel Adı</label>
+                    <br />
+                    <span asp-validation-for="PersonName" class="text-danger"></span>
+                    <input asp-for="PersonName" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Personel Görevi</label>
+                    <br />
+                    <span asp-validation-for="Title" class="text-danger"></span>
+                    <input asp-for="Title" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Personel Resmi</label>
+                    <br />
+                    <span asp-validation-for="ImageUrl" class="text-danger"></span>
+                    <input asp-for="ImageUrl" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Personel İnstagram</label>
+                    <input asp-for="InstagramURL" class="form-control" placeholder="Yok ise herhangi bir sosyal medya hesabı eklenebilir" />
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Personel LinkedIn</label>
+                    <input asp-for="LinkedInURL" class="form-control" placeholder="Yok ise herhangi bir sosyal medya hesabı eklenebilir" />
+                </div>
+                <button class="btn btn-outline-success">Kaydet</button>
+                <a href="/Service/Index" class="btn btn-light">Vazgeç</a>
+            </form>
+        </div>
+    </div>
+</div>
