@@ -18,6 +18,14 @@ namespace AgricultureApp
             builder.Services.AddScoped<IServiceDal, EfServiceDal>();
             builder.Services.AddScoped<ITeamService, TeamManager>();
             builder.Services.AddScoped<ITeamDal, EfTeamDal>();
+            builder.Services.AddScoped<IAnnouncementService, AnnouncementManager>();
+            builder.Services.AddScoped<IAnnouncementDal, EfAnnouncementDal>();
+            builder.Services.AddScoped<IImageService, ImageManager>();
+            builder.Services.AddScoped<IImageDal, EfImageDal>();
+            builder.Services.AddScoped<IAddressService, AddressManager>();
+            builder.Services.AddScoped<IAddressDal, EfAddressDal>();
+            builder.Services.AddScoped<IContactService, ContactManager>();
+            builder.Services.AddScoped<IContactDal, EfContactDal>();
             builder.Services.AddDbContext<AgricultureContext>();
             var app = builder.Build();
 

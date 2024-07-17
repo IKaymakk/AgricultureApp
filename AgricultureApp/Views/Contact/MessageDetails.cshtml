@@ -1,0 +1,31 @@
+﻿@model EntityLayer.Concrete.Contact
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<div style="width:100%" class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">@ViewBag.ID Numaralı Mesaj - @Model.Date.ToShortDateString()</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputUsername1">Gönderen Kişi</label>
+                    <label class="form-control">@Model.Name</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Mail Adresi</label>
+                    <label class="form-control">@Model.Mail</label>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mesaj</label>
+                    <label class="form-control">@Model.Message</label>
+                </div>
+                <a href="/Contact/Index" class="btn btn-secondary">Geri Dön</a>
+                <input asp-for="ContactID" readonly="readonly" type="hidden" />
+            </form>
+        </div>
+    </div>
+</div>
+
+
