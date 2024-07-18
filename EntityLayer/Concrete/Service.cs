@@ -9,8 +9,10 @@ namespace EntityLayer.Concrete
     public class Service
     {
         public int ServiceId { get; set; }
-        public string ServiceTitle{ get; set; }
-        public string ServiceDescription{ get; set; }
-        public string ServiceImage{ get; set; }
+        public string ServiceTitle { get; set; }
+        public string ServiceDescription { get; set; }
+        public string ServiceImage { get; set; }
+        public string MainClass { get; set; }
+        public string Class { get; set; }
     }
 }

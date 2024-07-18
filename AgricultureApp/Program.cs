@@ -26,6 +26,10 @@ namespace AgricultureApp
             builder.Services.AddScoped<IAddressDal, EfAddressDal>();
             builder.Services.AddScoped<IContactService, ContactManager>();
             builder.Services.AddScoped<IContactDal, EfContactDal>();
+            builder.Services.AddScoped<IAboutService, AboutManager>();
+            builder.Services.AddScoped<IAboutDal, EfAboutDal>();
+            builder.Services.AddScoped<IAdminService, AdminManager>();
+            builder.Services.AddScoped<IAdminDal, EfAdminDal>();
             builder.Services.AddDbContext<AgricultureContext>();
             var app = builder.Build();
 

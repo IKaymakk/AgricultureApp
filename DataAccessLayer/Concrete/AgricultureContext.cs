@@ -20,6 +20,8 @@ namespace DataAccessLayer.Concrete
         public DbSet<Announcement> Announcements { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Team> Teams { get; set; }
+        public DbSet<About> Abouts { get; set; }
+        public DbSet<Admin> Admins { get; set; }
 
     }
 }

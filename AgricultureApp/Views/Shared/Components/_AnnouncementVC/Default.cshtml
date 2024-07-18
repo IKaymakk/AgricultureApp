@@ -1,0 +1,25 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Announcement>
+
+<div class="blog" id="blog">
+    <div class="container">
+        <h3 class="tittle">Duyurular</h3>
+        <br />
+        @foreach (var x in Model)
+        {
+            <div class="blog-grid-w3-agileits">
+                <div class=" col-md-5 blog-info-w3layouts blog-mid">
+                    <h6><a>@x.Title</a></h6>
+                    <div class="inner-info-mid">
+                        <a href="#" class="blog-text-w3ls mid-bar">Yayınlanma Tarihi</a><span>@x.Date.ToShortDateString()</span>
+                        <p class="para-w3-agileits">@x.Description</p>
+                    </div>
+
+                </div>
+                <div class=" col-md-7 blog-img2-agileits-w3layouts">
+                    <a href="#" data-toggle="modal" data-target="#myModal3"></a>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        }
+    </div>
+</div>
