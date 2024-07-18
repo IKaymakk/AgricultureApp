@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Contact>
+<div class="row">
+    <div class="col-md-12 stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-title">Son Mesaj</p>
+                <div class="table-responsive">
+                    <table id="recent-purchases-listing" class="table text-center">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Ad Soyad</th>
+                                <th>Mail</th>
+                                <th>Tarih</th>
+                                <th>Mesajı Gör</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var x in Model)
+                            {
+                                <tr>
+                                    <td>@x.ContactID</td>
+                                    <td>@x.Name</td>
+                                    <td>@x.Mail</td>
+                                    <td>@x.Date.ToShortDateString()</td>
+                                    <td><a href="/Contact/MessageDetails/@x.ContactID" style="padding: 1em 1em 1em 1em" class="btn btn-primary">Mesajı Gör</a></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -35,12 +35,12 @@ namespace BusinessLayer.Concrete
 
         public void Insert(Admin t)
         {
-            throw new NotImplementedException();
+            _dal.Insert(t);
         }
 
         public void Update(Admin t)
         {
-            throw new NotImplementedException();
+            _dal.Update(t);
         }
     }
 }
